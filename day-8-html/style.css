@@ -1,0 +1,118 @@
+body {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+.profile-container {
+  position: relative;
+  height: 100vh;
+}
+.card {
+  box-shadow: 2px 8px 12px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  text-align: center;
+  width: 100%;
+  max-width: 300px;
+  min-height: 360px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 40px 20px;
+}
+.card .card-header {
+  position: relative;
+}
+.card .card-header i {
+  font-size: 22px;
+  color: #fff;
+}
+.card .card-header .badge {
+  background-color: rgb(88 88 148);
+  border-radius: 50px;
+  border: 3px solid rgb(41, 41, 87);
+  position: absolute;
+  display: inline-block;
+  padding: 5px;
+  cursor: pointer;
+  transition: transform 0.6s ease;
+  transform-style: preserve-3d;
+}
+.card .card-header .badge:hover {
+  transform: rotateY(180deg);
+}
+.card .card-header .badge:hover i {
+  color: rgb(253 227 200);
+}
+.card img {
+  border-radius: 50%;
+  border: 3px solid rgb(41, 41, 87);
+}
+.card h1 {
+  font-size: 40px;
+  color: rgb(41, 41, 87);
+  margin: 15px 0 0 0;
+}
+.card p {
+  font-size: 20px;
+  color: rgb(89, 89, 99);
+  margin: 10px 0;
+}
+.card .social-links i {
+  color: rgb(41, 41, 87);
+  font-size: 30px;
+  margin: 10px;
+}
+.card .social-links i:hover {
+  cursor: pointer;
+  animation-name: icon_color;
+  animation-duration: 0.4s;
+}
+@keyframes icon_color {
+  from {
+    color: rgb(41, 41, 87);
+  }
+  to {
+    color: rgb(88 88 148);
+  }
+}
+.card button {
+  border: none;
+  background-color: rgb(41, 41, 87);
+  font-size: 20px;
+  color: #fff;
+  width: 100%;
+  padding: 12px;
+  margin-top: 15px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  transition-duration: 0.4s;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+}
+.card button:after {
+  content: "";
+  background: #f1f1f1;
+  display: block;
+  position: absolute;
+  padding-top: 300%;
+  padding-left: 350%;
+  margin-left: -20px !important;
+  margin-top: -120%;
+  opacity: 0;
+  transition: all 0.8s;
+}
+.card button:hover {
+  background-color: rgb(88 88 148);
+}
+.card button:active:after {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s;
+  border: none;
+}
