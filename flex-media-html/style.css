@@ -1,0 +1,121 @@
+body {
+  margin: 0;
+  box-sizing: border-box;
+  margin: 50px;
+}
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+  margin-bottom: 20px;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #04aa6d;
+  color: white;
+}
+.flex-container {
+  display: flex;
+  background-color: #f9b9b9;
+  border-radius: 10px;
+  height: 400px;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.card {
+  padding: 10px;
+  margin: 10px;
+  width: 200px;
+  min-height: 200px;
+  background-color: rgb(81, 47, 81);
+  box-shadow: 2px 8px 12px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  text-align: center;
+  color: #fff;
+  font-size: 30px;
+}
+.bg-orange {
+  background-color: rgb(227, 172, 70);
+}
+.img-burger {
+  background-image: url("burger.jpg");
+  height: 400px;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-top: 20px;
+}
+
+
+/* 1. Resize-Based Style */
+
+@media screen and (max-width: 600px) {
+  .flex-container {
+    flex-direction: column;
+    background-color: #a37676;
+    height: auto;
+  }
+  .card {
+    font-size: 20px;
+    flex-basis: 0 !important;
+    align-self: center !important;
+    min-height: 100px;
+  }
+}
+
+/* 2. Orientation Change */
+
+@media screen and (orientation: portrait) {
+  .flex-container {
+    background-color: lightcoral;
+  }
+}
+
+/* 3. Device Type : print Media */
+@media print {
+  nav {
+    display: none;
+  }
+}
+
+/* 4. Pixel Density */
+
+@media (min-resolution: 2dppx) {
+  /* Styles for high-DPI screens (2x or more) */
+  .img-burger {
+    background-image: url("burger2.jpg");
+    background-size: cover;
+  }
+}
+
+/* 5. Dark Mode Support */
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #333;
+    color: #fff;
+  }
+}
+
+/* 6. Bonus: Combine Conditions */
+
+@media screen and (max-width: 768px) and (orientation: landscape) {
+  body {
+    background-color: #04aa6d;
+  }
+}
