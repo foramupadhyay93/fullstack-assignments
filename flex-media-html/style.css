@@ -95,11 +95,10 @@ body {
 
 /* 4. Pixel Density */
 
-@media (min-resolution: 2dppx) {
+@media (min-resolution: 1dppx) {
   /* Styles for high-DPI screens (2x or more) */
   .img-burger {
     background-image: url("burger2.jpg");
-    background-size: cover;
   }
 }
 
